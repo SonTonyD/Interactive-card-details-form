@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import PaymentForm from "./components/PaymentForm"
+import PreviewCard from "./components/PreviewCard"
+import { useState } from 'react';
 
 function App() {
+  const[PaymentInfo, SetPaymentInfo] = useState({
+    cardholderName:"",
+    cardNumber:""
+  });
+
+  function handleChange(paymentInfo) {
+    SetPaymentInfo(paymentInfo)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <PreviewCard paymentInfo={PaymentInfo} />
+      <br />
+      <PaymentForm handleChange={handleChange}/>
+    </>
   );
 }
 
