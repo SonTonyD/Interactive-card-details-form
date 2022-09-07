@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Space-Grotesk';
+    src: URL('/public/assets/fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+}
+
+.container {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+label {
+    font-size: 12px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-family: Space-Grotesk;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+    word-spacing: 2px;
+}
+
+input {
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 8px;
+    border-color: darkgrey;
+    border-width: 1px;
+    font-family: Space-Grotesk;
+    padding-left: 10px;
+}
+
+.confirm-btn {
+    background-color: hsl(278, 68%, 11%);
+    border: none;
+    color: azure;
+    height: 40px;
+    border-radius: 8px;
+    margin-top: 25px;
+    
+}
+
+.date-info {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.exp-date-input-group{
+    display: flex;
+    width: 100%;
+    margin-right: 5px;
+}
+
+.exp-date-input {
+    width: 50%;
+    margin-right: 5px;
+}
+
+.cvc {
+    width: 100%;
+}
+
+.cvc-input-group {
+    display: flex;
+    width: 100%;
+}
+
+.cvc-input {
+    width: 100%;
+}

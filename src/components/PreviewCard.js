@@ -10,12 +10,16 @@ function PreviewCard(props) {
     }, [props])
 
     return (
-        <div>
+        <div >
             <h1>PreviewCard</h1>
             <br />
             <label>Cardholder Name : {previewPaymentInfo.cardholderName} </label>
             <br />
-            <label>Card Number : {previewPaymentInfo.cardNumber} </label>
+            <label>CardNumber : {previewPaymentInfo.cardNumber} </label>
+            <br />
+            <label>exp. date (MM/YY) : {previewPaymentInfo.MM} / {previewPaymentInfo.YY} </label>
+            <br />
+            <label>CVC: {previewPaymentInfo.CVC} </label>
         </div>
     );
 }
