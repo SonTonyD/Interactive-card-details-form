@@ -16,11 +16,11 @@ function PreviewCard(props) {
                     <circle cx="35" cy="35" r="15" fill="white" />
                 </svg>
                 <svg className="Preview-small-circle" height="100" width="100">
-                    <circle cx="35" cy="35" r="7" fill="none" stroke="white" stroke-width="2" />
+                    <circle cx="35" cy="35" r="7" fill="none" stroke="white" strokeWidth="2" />
                 </svg>
 
                 <div className="Preview-card-number">
-                    <label>0000 0000 0000 0000</label>
+                    <label>{previewPaymentInfo.cardNumber}</label>
                 </div>
 
                 <div className="Preview-bottom-info">

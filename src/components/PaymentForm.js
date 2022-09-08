@@ -22,6 +22,28 @@ export default function PaymentForm(props) {
         handleChange(PaymentInfo)
     }, [PaymentInfo, handleChange]);
 
+    function handleCardNumber(event) {
+        let { name, value } = event.target;
+        if(value.length === 4 || value.length === 9 || value.length === 14) {
+            value += " "
+        }
+        setPaymentInfo({ ...PaymentInfo, [name]: value })
+    }
+
+    function handleKeyDown(event) {
+        if (event.key === 'Backspace') {
+            let { name, value } = event.target;
+            console.log(value[value.length-1])
+            if (value[value.length-1] === ' ') {
+                value = value.slice(0,-1)
+            } 
+            setPaymentInfo({ ...PaymentInfo, [name]: value })
+        }
+    };
+
+    
+    
+
     return (
         <form className="container" autoComplete="off">
             <label className="PaymentForm-label">cardholder name :</label>
@@ -31,7 +53,7 @@ export default function PaymentForm(props) {
 
             <label className="PaymentForm-label">card number :</label>
 
-            <input type="text" name="cardNumber" value={PaymentInfo.cardNumber} onChange={(event) => handleOnChange(event)} placeholder="e.g. 1234 5678 9123 0000" />
+            <input size="19" maxLength="19" data-stripe="number" type="text" name="cardNumber" value={PaymentInfo.cardNumber} onChange={(event) => handleCardNumber(event)} onKeyDown={handleKeyDown} placeholder="e.g. 1234 5678 9123 0000" />
 
             <div className="date-info">
                 <div className="exp-date">
@@ -55,3 +77,4 @@ export default function PaymentForm(props) {
         </form>
     );
 }
+
