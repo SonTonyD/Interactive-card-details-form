@@ -3,14 +3,38 @@ import { useState } from "react";
 
 function PreviewCard(props) {
     //const {paymentInfo} = props;
-    const[previewPaymentInfo, setPreviewPaymentInfo] = useState(0);
+    const [previewPaymentInfo, setPreviewPaymentInfo] = useState(0);
 
-    useEffect(()=> {
+    useEffect(() => {
         setPreviewPaymentInfo(props.paymentInfo);
     }, [props])
 
     return (
-        <div >
+        <div className="Preview-container">
+            <div className="Preview-front-card">
+                <svg height="100" width="100">
+                    <circle cx="35" cy="35" r="15" fill="white" />
+                </svg>
+                <svg className="Preview-small-circle" height="100" width="100">
+                    <circle cx="35" cy="35" r="7" fill="none" stroke="white" stroke-width="2" />
+                </svg>
+
+                <div className="Preview-card-number">
+                    <label>0000 0000 0000 0000</label>
+                </div>
+
+                <div className="Preview-bottom-info">
+                    <label>Jane Appleseed</label>
+                    <label>00/00</label>
+                </div>
+            </div>
+            <div className="Preview-back-card">
+                <div className="Preview-cvc">
+                    <label>000</label>
+                </div>
+            </div>
+
+            {/*
             <h1>PreviewCard</h1>
             <br />
             <label>Cardholder Name : {previewPaymentInfo.cardholderName} </label>
@@ -20,6 +44,8 @@ function PreviewCard(props) {
             <label>exp. date (MM/YY) : {previewPaymentInfo.MM} / {previewPaymentInfo.YY} </label>
             <br />
             <label>CVC: {previewPaymentInfo.CVC} </label>
+            */}
+            
         </div>
     );
 }

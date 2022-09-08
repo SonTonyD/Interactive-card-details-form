@@ -12,7 +12,7 @@
     width: 80%;
 }
 
-label {
+.PaymentForm-label {
     font-size: 12px;
     margin-top: 15px;
     text-transform: uppercase;
@@ -71,3 +71,80 @@ input {
 .cvc-input {
     width: 100%;
 }
+
+/******PREVIEW CARD******/
+
+.Preview-container {
+    background-image: url("/public/assets/images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    height: 200px;
+    z-index: 0;
+}
+
+.Preview-front-card {
+    position: absolute;
+    background-image: url("/public/assets/images/bg-card-front.png");
+    background-size: 260px;
+    height: 150px;
+    width: 260px;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    margin-top: 100px;
+    margin-left: 20px;
+
+}
+
+.Preview-small-circle {
+    margin-left: -65px;
+}
+
+.Preview-bottom-info {
+    position: absolute;
+    margin-top: 10px;
+    color: white;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 60px;
+    font-family: Space-Grotesk;
+    font-size: 13px;
+}
+
+.Preview-card-number {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    margin-top: -25px;
+    display: flex;
+    justify-content: center;
+    font-family: Space-Grotesk;
+    color: white;
+    font-size: 18px;
+    word-spacing: 6px;
+}
+
+.Preview-back-card {
+    position: absolute;
+    background-image: url("/public/assets/images/bg-card-back.png");
+    background-size: 260px;
+    height: 150px;
+    width: 260px;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.Preview-cvc {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 205px;
+    font-family: Space-Grotesk;
+    color: white;
+    font-size: 13px;
+}
+
+
