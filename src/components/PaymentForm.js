@@ -60,14 +60,14 @@ export default function PaymentForm(props) {
                     <label className="PaymentForm-label">exp. date (MM/YY) </label>
 
                     <div className="exp-date-input-group">
-                        <input className="exp-date-input" type="text" name="MM" value={PaymentInfo.MM} onChange={(event) => handleOnChange(event)} placeholder="MM" />
-                        <input className="exp-date-input" type="text" name="YY" value={PaymentInfo.YY} onChange={(event) => handleOnChange(event)} placeholder="YY" />
+                        <input size="2" maxLength="2" className="exp-date-input" type="text" name="MM" value={PaymentInfo.MM} onChange={(event) => handleOnChange(event)} placeholder="MM" />
+                        <input size="2" maxLength="2" className="exp-date-input" type="text" name="YY" value={PaymentInfo.YY} onChange={(event) => handleOnChange(event)} placeholder="YY" />
                     </div>
                 </div>
                 <div className="cvc">
                     <label className="PaymentForm-label">cvc </label>
                     <div className="cvc-input-group">
-                        <input className="cvc-input" type="text" name="CVC" value={PaymentInfo.CVC} onChange={(event) => handleOnChange(event)} placeholder="e.g. 123" />
+                        <input size="3" maxLength="3" className="cvc-input" type="text" name="CVC" value={PaymentInfo.CVC} onChange={(event) => handleOnChange(event)} placeholder="e.g. 123" />
                     </div>
                     
                 </div>

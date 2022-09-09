@@ -106,10 +106,19 @@ input {
     width: 100%;
     height: 35px;
     display: flex;
-    justify-content: space-evenly;
-    column-gap: 60px;
     font-family: Space-Grotesk;
     font-size: 13px;
+}
+
+.Preview-cardholder-name{
+    position: absolute;
+    margin-left: 20px;
+}
+
+.Preview-date-info {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
 }
 
 .Preview-card-number {

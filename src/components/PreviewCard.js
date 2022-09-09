@@ -2,12 +2,27 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 function PreviewCard(props) {
-    //const {paymentInfo} = props;
-    const [previewPaymentInfo, setPreviewPaymentInfo] = useState(0);
+    const [previewPaymentInfo, setPreviewPaymentInfo] = useState({
+        cardholderName: '',
+        cardNumber: '',
+        MM: "",
+        YY: "",
+        CVC: ""
+    });
 
     useEffect(() => {
-        setPreviewPaymentInfo(props.paymentInfo);
+        if (props.paymentInfo.cardNumber === "") {
+            setPreviewPaymentInfo({...previewPaymentInfo, 'cardNumber' : "0000 0000 0000 0000"});
+        } 
+        else {
+            setPreviewPaymentInfo(props.paymentInfo);
+        }
+
+        
+        
     }, [props])
+
+
 
     return (
         <div className="Preview-container">
@@ -24,13 +39,13 @@ function PreviewCard(props) {
                 </div>
 
                 <div className="Preview-bottom-info">
-                    <label>Jane Appleseed</label>
-                    <label>00/00</label>
+                    <label className="Preview-cardholder-name">{previewPaymentInfo.cardholderName}</label>
+                    <label className="Preview-date-info">{previewPaymentInfo.MM}/{previewPaymentInfo.YY}</label>
                 </div>
             </div>
             <div className="Preview-back-card">
                 <div className="Preview-cvc">
-                    <label>000</label>
+                    <label>{previewPaymentInfo.CVC}</label>
                 </div>
             </div>
 
