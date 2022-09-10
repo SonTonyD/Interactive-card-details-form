@@ -15,9 +15,16 @@ function App() {
 
   return (
     <>
-      <PreviewCard paymentInfo={PaymentInfo} />
-      <br />
-      <PaymentForm handleChange={handleChange}/>
+      <div className='Top-Container'>
+        <div className='Component-PreviewCard'>
+          <PreviewCard paymentInfo={PaymentInfo} />
+        </div>
+        
+        <br />
+        <div className='Component-PaymentForm'>
+          <PaymentForm handleChange={handleChange}/>
+        </div>
+      </div>
     </>
   );
 }

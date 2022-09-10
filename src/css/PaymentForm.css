@@ -4,7 +4,7 @@
 }
 
 .container {
-    margin-top: 20%;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     margin-left: auto;
@@ -79,6 +79,13 @@ input {
     background-repeat: no-repeat;
     height: 200px;
     z-index: 0;
+    background-size: cover;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    margin-right: 7vw;
 }
 
 .Preview-front-card {
@@ -154,6 +161,70 @@ input {
     font-family: Space-Grotesk;
     color: white;
     font-size: 13px;
+}
+
+@media(min-width : 1023px) {
+    .Preview-container {
+        background-image: url("/public/assets/images/bg-main-desktop.png");
+        background-repeat: no-repeat;
+        height: 100vh;
+        z-index: 0;
+        width: 35%;
+    }
+
+    .cards-container {
+        display: block;
+        position: absolute;
+        margin-left: 18%;
+        margin-top: 20%;
+    }
+
+    .Preview-front-card {
+        position: absolute;
+        background-image: url("/public/assets/images/bg-card-front.png");
+        background-size: 260px;
+        height: 150px;
+        width: 260px;
+        background-repeat: no-repeat;
+        z-index: 2;
+    
+        margin-top: -25px;
+        margin-left: 20px;
+    }
+
+    .Preview-back-card {
+        position: absolute;
+        background-image: url("/public/assets/images/bg-card-back.png");
+        background-size: 260px;
+        height: 150px;
+        width: 260px;
+        background-repeat: no-repeat;
+        z-index: 1;
+    
+        margin-top: 130px;
+        margin-left: 100px;
+    }
+
+    /*APP js*/
+    .Top-Container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .Component-PreviewCard {
+        position: absolute;
+        width: 100%;
+        left : -5vw;
+        height: 100vh;
+    }
+    .Component-PaymentForm {
+        position: absolute;
+        width: 40%;
+        top : 18vh;
+        left: 50vw;
+        max-width: 800px;
+        min-width: 300px;
+    }
 }
 
 
