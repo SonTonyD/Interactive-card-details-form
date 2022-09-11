@@ -212,7 +212,7 @@ input {
     }
 
     .Component-PreviewCard {
-        position: absolute;
+        position: fixed;
         width: 100%;
         left : -5vw;
         height: 100vh;

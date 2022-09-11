@@ -11,12 +11,7 @@ function PreviewCard(props) {
     });
 
     useEffect(() => {
-        if (props.paymentInfo.cardNumber === "") {
-            setPreviewPaymentInfo({...previewPaymentInfo, 'cardNumber' : "0000 0000 0000 0000"});
-        } 
-        else {
-            setPreviewPaymentInfo(props.paymentInfo);
-        }
+        setPreviewPaymentInfo(props.paymentInfo);
     }, [props])
 
 
